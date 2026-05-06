@@ -1,0 +1,24 @@
+{
+  "name": "laboratorio-7-sw",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bastmre44/Laboratorio-7-SW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bastmre44/Laboratorio-7-SW/issues"
+  },
+  "homepage": "https://github.com/bastmre44/Laboratorio-7-SW#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
