@@ -30,6 +30,13 @@ app.get('/', (req, res) => {
   res.send('¡Servidor Express funcionando correctamente!')
 })
 
+//manejo de errores 
+app.use((req, res) => {
+  res.status(404).send(`Ruta no encontrada: ${req.url}`)
+})
+
+
+
 // Ruta info
 app.get('/info', (req, res) => {
   res.json({
@@ -39,9 +46,20 @@ app.get('/info', (req, res) => {
   })
 })
 
+//manejo de errores para la ruta info
+app.use((req, res) => {
+  res.status(404).send(`Ruta no encontrada: ${req.url}`)
+})
+
+
+
 // Ruta saludo
 app.get("/saludo", (req, res) => {
   res.send("¡Hola, bienvenido a mi servidor Express!")
+})
+//manejo de errores para la ruta saludo
+app.use((req, res) => {
+  res.status(404).send(`Ruta no encontrada: ${req.url}`)
 })
 
 //status
@@ -51,6 +69,11 @@ app.get("/api/status", (req, res) => {
     status: "Servidor funcionando correctamente",
     puerto: PORT
   })
+})
+
+//manejo de errores para la ruta status
+app.use((req, res) => {
+  res.status(404).send(`Ruta no encontrada: ${req.url}`)
 })
 
 // Iniciar el servidor
